@@ -17,17 +17,14 @@ app.set("views", "views"); // Backend da frontend ni yasash u-n folder kerak bol
 app.set("view engine", "ejs"); // bu yerda view engine "ejs" ekanligini ko'rsatdik
 
 // 4 Routing code
-app.get("/hello", function(req, res) {
-    res.end(`<h1 style = "background: red">Hello World by Sam</h1>`); // "hello" section
+app.post("/create-item", (req, res) => {
+    console.log(req);
+    res.json({test:"success"});
 });
 
-app.get("/gift", function(req, res) {
-    res.end(`<h1 style = "background: red">You are in the gift section</h1>`); // "gift" setion
-});
-
-app.get("/book", function(req, res) {
-    res.end(`<h1 style = "background: red">You are in the books section</h1>`); // "gift" setion
-});
+app.get("/", function(req, res) {
+    res.render("harid");
+})
 
 const server = http.createServer(app); //"app" expressm varibale nomi
 let PORT = 3000;
