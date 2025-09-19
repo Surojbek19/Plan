@@ -1,0 +1,13 @@
+{
+    "name": "Sam",
+    "proffesion": "Software Engineer",
+    "age": 24,
+    "address": "S.Korea",
+    "languages": ["Uzbek", "Korean", "English"],
+    "skills": ["Html", "Css", "Js", "NodeJS", "Python"],
+    "extra_skills": ["Bootstrap, Materialize", "Styling, Sass", "Django, Flask", "GIT Knowledge"],
+    "work_place": "IT Company",
+    "service_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "about_me":"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium"
+
+}
