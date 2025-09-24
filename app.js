@@ -31,16 +31,36 @@ app.set("view engine", "ejs"); // bu yerda view engine "ejs" ekanligini ko'rsatd
 
 // 4 Routing code
 app.post("/create-item", (req, res) => {
-    console.log(req);
-    res.json({test:"success"});
+    console.log(`user entered/create-item`)
+    console.log(req.body);
+    const new_reja = req.body.reja;
+    console.log("new_reja:", new_reja);
+    db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+        if(err) {
+            console.log(err);
+            res.end("something went wrong")
+        } else {
+            res.end("succefully added");
+        }
+    });
 });
 
-app.get("/author",(req, res) => {
+app.get("/author", (req, res) => {
     res.render("author", {user: user});
 } )
 
 app.get("/", function(req, res) {
-    res.render("reja");
+    console.log(`user entered/`)
+    db.collection("plans")
+    .find()
+    .toArray((err, data) => {
+        if(err) {
+            consolelog(err);
+            res.end("something went wrong");
+        } else {
+            res.render("reja", { items: data })
+        }
+    })
 })
 
 module.exports = app
