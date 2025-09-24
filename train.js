@@ -1,4 +1,50 @@
+// TASK B 
+// function countLetter(charrcater, word) {
+//     const toLowerCase = word.toLowerCase()
+//     const myWord = toLowerCase.split("");
 
+//     let count = 0
+//     myWord.map((ele) => {
+//         if(ele === charrcater) {
+//             count ++;
+//         }
+//     })
+//     return count;
+// }
+
+// const result = countLetter("e", "Engineer")
+// console.log("result:", result)
+
+
+
+function countDigits(string) {
+    const num_digit = string.split("");
+    num_digit.map((num) => {
+      tempNum = Number(num);
+
+      if(!isNaN(tempNum)){
+        console.log(tempNum);
+      }
+
+    //   if()
+    });
+    
+
+}
+
+
+//     let count = 0
+//     num_digit.map((ele) => {
+//         if(ele === integer) {
+//             count
+//         }
+//     })
+//     return count;
+// }
+
+countDigits("ad2a54y79wet0sfgb9");
+// const result = countDigits("ad2a54y79wet0sfgb9")
+// console.log("result:", result);
 
 // console.log("Jeck Ma maslahatlari");
 
