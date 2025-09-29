@@ -1,25 +1,62 @@
+// TASK C
+
+const moment = require(`moment`);
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+    
+  }
+
+  qoldiq() {
+    console.log(`Hozir ${moment().format("HH:mm")} da, ${this.non} ta non, ${this.lagmon} ta lagmon, ${this.cola} ta cola mavjud.`)
+  }
+
+  sotish(product, count) {
+    this[product] -= count;
+    this.qoldiq();
+
+  }
+
+  qabul(product, count) {
+    this[product] += count;
+    this.qoldiq();
+  }
+}
+
+const shop = new Shop(4, 5, 3);
+shop.sotish("lagmon", 3);
+shop.qabul("lagmon", 6);
+
+
+
+
+
+
 // TASK B 
 // Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 // MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
 
 
-function countDigits(string) {
-    const num_digit = string.split("");
+// function countDigits(string) {
+//     const num_digit = string.split("");
    
-    let count = 0;
-    num_digit.map((num) => {
-      tempNum = Number(num);
+//     let count = 0;
+//     num_digit.map((num) => {
+//       tempNum = Number(num);
 
-      if(!isNaN(tempNum)){
-        count++;      
-      }
-    });
-return count;
-}
+//       if(!isNaN(tempNum)){
+//         count++;      
+//       }
+//     });
+// return count;
+// }
 
-const result = countDigits("ad2a54y79wet0sfgb9")
-console.log("result:", result);
+// const result = countDigits("ad2a54y79wet0sfgb9")
+// console.log("result:", result);
 
 // console.log("Jeck Ma maslahatlari");
 
