@@ -1,17 +1,35 @@
-// TASK D
-function checkContent(string1, srting2) {
-  let word1 = string1;
-  let word2 = srting2; 
-  
-    if (word1.split(``).sort().join(``) === word2.split(``).sort().join(``)) {
-      return true;
-    } else {
-      return false;
-    }
-  //}
+//TASK E
+//Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+//MASALAN: getReverse("hello") return qilsin "olleh"
+
+
+function getReverse(word) {
+  let reversed = word.split('').reverse().join('');
+  return reversed;
 }
 
-console.log(checkContent("apple", "plep"));
+console.log(getReverse("great"));
+
+
+
+
+
+// TASK D 
+//Shunday function tuzing, u 2ta string parametr ega bolsin, 
+//hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// function checkContent(string1, srting2) {
+//   let word1 = string1;
+//   let word2 = srting2; 
+  
+//     if (word1.split(``).sort().join(``) === word2.split(``).sort().join(``)) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   //}
+// }
+
+// console.log(checkContent("apple", "plep"));
 
 
 

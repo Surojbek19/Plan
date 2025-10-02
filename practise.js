@@ -32,25 +32,4 @@ console.log(reverse("hello"))
 // Last index = "word.length - 1"
 // We set "i = word.length - 1" so our loop starts at thr last character
 
- let userInput = prompt(
-            "O'zgartrish kiriting",
-            e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
-        );
-        if(userInput) {
-            console.log(userInput)
-            axios
-            .post("/edit-item", {
-                id: e.target.getAttribute("data-id"),
-                new_input: userInput,                                         
-                })
-                .then((response) => {
-                    console.log(response.data);
-                    e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
-                })
-                .catch((err) => {
-                    console.log("Iltimos qaytadan harakat qiling");
-                });
-            }
-//     }
-  
-// }); 
+ 
